@@ -15,9 +15,7 @@ app.use(express.urlencoded({ extended: true, limit: '50mb' }));
 app.use(helmet());
 app.use('/', routes);
 
-
-
-var listener = app.listen(function(){
+var listener = app.listen(4000,function(){
     init()
     console.log('Listening on port ' + listener.address().port); //Listening on port 8888
 });
